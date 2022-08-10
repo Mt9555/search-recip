@@ -33,6 +33,7 @@ const RLSearchBox: React.FC<SearchBoxProps> = ({
             autoComplete="off"
             value={query}
             onChange={handleChange}
+            required
             placeholder={placeholderText}
           />
         </Form.Group>

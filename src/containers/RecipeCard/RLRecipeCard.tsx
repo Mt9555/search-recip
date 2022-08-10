@@ -12,6 +12,7 @@ interface RecipeCardProp {
   cuisineType: string;
   dish: string;
   dietLabels: string;
+  nutritions: Array<string>;
 }
 const RecipeCard: React.FC<RecipeCardProp> = ({
   title,
@@ -21,7 +22,8 @@ const RecipeCard: React.FC<RecipeCardProp> = ({
   mealType,
   cuisineType,
   dish,
-  dietLabels
+  dietLabels,
+  nutritions
 }) => {
   const [isCopied, setIsCopied] = React.useState(false);
 
@@ -48,14 +50,28 @@ const RecipeCard: React.FC<RecipeCardProp> = ({
   });
 
   return (
-    <div className="recipe">
+    <>
       <h1>{title}</h1>
-      <p>Calories: {Math.floor(calories)}g</p>
-      <p>MealType: {mealType}</p>
-      <p>Diet: {dietLabels}</p>
-      <p>Dish: {dish}</p>
-      <p>country: {cuisineType}</p>
-      <img src={image} alt="" />
+      <p>calories: {Math.floor(calories)}g</p>
+      {nutritions &&
+        nutritions.map((item: any, idx: any) => (
+          <p key={idx}>
+            {item.label === 'Fat' && (
+              <span> fat: {Math.round(item.total) + '%'} </span>
+            )}
+            {item.label === 'Carbs' && (
+              <span> carbs: {Math.round(item.total) + '%'}</span>
+            )}
+            {item.label === 'Protein' && (
+              <span> protein: {Math.round(item.total) + '%'} </span>
+            )}
+          </p>
+        ))}
+      <p>meal type: {mealType}</p>
+      <p>diet: {dietLabels}</p>
+      <p>dish: {dish}</p>
+      <p>cuisine type: {cuisineType}</p>
+      <img src={image} alt="no image" />
       <ul className="ingredient-list">
         {ingredients.map((ingredient: any, idx: any) => (
           <li className="lead" key={idx}>
@@ -68,11 +84,11 @@ const RecipeCard: React.FC<RecipeCardProp> = ({
         variant="secondary"
         size="sm"
       >
-        {isCopied ? 'copied!' : 'copyRecipe'}
+        {isCopied ? 'copied!' : 'copy'}
       </Button>
       <br />
       <br />
-    </div>
+    </>
   );
 };
 

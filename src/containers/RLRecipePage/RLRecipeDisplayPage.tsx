@@ -48,7 +48,7 @@ const RLRecipePage: React.FC<RLRecipeDisplayPageProp> = () => {
         placeholderText={text}
       />
       <br /> <br />
-      {dsq && <h6>About {recipes.length + 1} results</h6>} <br />
+      {dsq && <h6>About {recipes.length} results</h6>} <br />
       <div>
         {recipes &&
           recipes.map((recipeInfo: any, idx: any) => (
@@ -57,6 +57,7 @@ const RLRecipePage: React.FC<RLRecipeDisplayPageProp> = () => {
               key={idx}
               title={recipeInfo?.recipe?.label}
               calories={recipeInfo?.recipe?.calories}
+              nutritions={recipeInfo?.recipe?.digest}
               image={recipeInfo?.recipe?.image}
               ingredients={recipeInfo?.recipe?.ingredients}
               mealType={

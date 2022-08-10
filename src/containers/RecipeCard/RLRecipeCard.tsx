@@ -51,7 +51,7 @@ const RecipeCard: React.FC<RecipeCardProp> = ({
 
   return (
     <>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <p>calories: {Math.floor(calories)}g</p>
       {nutritions &&
         nutritions.map((item: any, idx: any) => (

@@ -47,8 +47,8 @@ const RLRecipePage: React.FC<RLRecipeDisplayPageProp> = () => {
         query={searchQuery ? searchQuery : ''}
         placeholderText={text}
       />
-      <br /> <br />
-      {dsq && <h6>About {recipes.length} results</h6>} <br />
+      <br /> 
+      {dsq && <h6>About {recipes.length + 3} results</h6>} <br />
       <div>
         {recipes &&
           recipes.map((recipeInfo: any, idx: any) => (

@@ -1,0 +1,11 @@
+.Application {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+::selection {
+  color: rgb(244, 250, 250);
+  background-color: rgb(44, 65, 65);
+}

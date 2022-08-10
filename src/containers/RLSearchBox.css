@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+
+.recipe-lookup-hero-text {
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-size: 80px;
+}
+.textBox:hover {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+}
+.textBox:focus {
+  border-color: #3a3d3b;
+  box-shadow: 0 0 0 0.2rem rgba(54, 56, 54, 0.25);
+} 
+

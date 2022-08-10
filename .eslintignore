@@ -1,0 +1,5 @@
+dist/*
+test/*
+/build
+build
+build/*

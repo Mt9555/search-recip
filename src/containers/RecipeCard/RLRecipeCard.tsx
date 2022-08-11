@@ -35,13 +35,13 @@ const RecipeCard: React.FC<RecipeCardProp> = ({
     }
   };
 
-  const handleCopyClick = (text: string) => {
+  const onCopyHandler = (text: string) => {
     copyTextToClipboard(text)
       .then(() => {
         setIsCopied(true);
         setTimeout(() => {
           setIsCopied(false);
-        }, 1500);
+        }, 2000);
       })
       .catch(() => {});
   };
@@ -80,7 +80,7 @@ const RecipeCard: React.FC<RecipeCardProp> = ({
         ))}
       </ul>
       <Button
-        onClick={() => handleCopyClick(value)}
+        onClick={() => onCopyHandler(value)}
         variant="secondary"
         size="sm"
       >

@@ -6,7 +6,7 @@ import './RLSearchBox.css';
 interface SearchBoxProps {
   handleSubmit: (e: any) => any;
   handleChange: (e: any) => any;
-  query?: string;
+  query: string;
   placeholderText: any;
 }
 
@@ -16,8 +16,6 @@ const RLSearchBox: React.FC<SearchBoxProps> = ({
   query,
   placeholderText
 }) => {
-
-
   return (
     <div className=".rlcontainer">
       <h1 className="recipe-lookup-hero-text">Recipe Lookup</h1>
@@ -25,7 +23,7 @@ const RLSearchBox: React.FC<SearchBoxProps> = ({
         <Form.Group className="mb-3">
           <Form.Label>Find the recipe for your favorite dish</Form.Label>
           <Form.Control
-            className='textBox'
+            className="textBox"
             type="text"
             size="lg"
             name="query"
@@ -40,7 +38,8 @@ const RLSearchBox: React.FC<SearchBoxProps> = ({
         <Button variant="primary" size="lg" type="submit">
           search
         </Button>
-      </Form><br />
+      </Form>
+      <br />
       <h6 className="sometext" style={{ color: '#ff0000', display: 'none' }}>
         Missing field !!!
       </h6>

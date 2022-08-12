@@ -23,7 +23,6 @@ const RLRecipePage: React.FC<RLRecipeDisplayPageProp> = () => {
       } else {
         el !== null && (el.style.display = 'none');
         getRecipeInfo(searchQuery).then((data) => setRecipes(data?.hits));
-        // clearConsole();
         setDsq(true);
       }
     } catch (e) {}
@@ -47,13 +46,12 @@ const RLRecipePage: React.FC<RLRecipeDisplayPageProp> = () => {
         query={searchQuery ? searchQuery : ''}
         placeholderText={text}
       />
-      <br /> 
+      <br />
       {dsq && <h6>{recipes.length} results</h6>} <br />
       <div>
         {recipes &&
           recipes.map((recipeInfo: any, idx: any) => (
             <RecipeCard
-              // recipeInfo?.recipe?.label
               key={idx}
               title={recipeInfo?.recipe?.label}
               calories={recipeInfo?.recipe?.calories}

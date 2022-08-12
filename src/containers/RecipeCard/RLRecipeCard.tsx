@@ -74,7 +74,7 @@ const RecipeCard: React.FC<RecipeCardProp> = ({
       <img src={image} alt="no image" />
       <ul className="ingredient-list">
         {ingredients.map((ingredient: any, idx: any) => (
-          <li className="lead" key={idx}>
+          <li className="ingredient-u-list" key={idx}>
             {ingredient.text}
           </li>
         ))}

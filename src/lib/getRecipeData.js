@@ -9,11 +9,5 @@ const getRecipeInfo = async (query) => {
     return data;
   } catch (error) {}
 };
-export const clearConsole = () => {
-  // eslint-disable-next-line no-undef
-  if (window.console || window.console.firebug) {
-    console.clear();
-  }
-};
 
 export default getRecipeInfo;

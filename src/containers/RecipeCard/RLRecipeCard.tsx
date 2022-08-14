@@ -2,12 +2,12 @@
 import React from 'react';
 import './RLRecipeCard.css';
 import Button from 'react-bootstrap/Button';
-
+import { v4 as uuid } from 'uuid';
 interface RecipeCardProp {
   title: string;
   calories: number;
   image: any;
-  ingredients: any;
+  ingredients: string[];
   mealType: string;
   cuisineType: string;
   dish: string;
@@ -45,7 +45,8 @@ const RecipeCard: React.FC<RecipeCardProp> = ({
       })
       .catch(() => {});
   };
-  const value = ingredients.map((ingredient: any) => {
+
+  const recipe = ingredients.map((ingredient: any) => {
     return ingredient.text;
   });
 
@@ -54,8 +55,8 @@ const RecipeCard: React.FC<RecipeCardProp> = ({
       <h2>{title}</h2>
       <p>calories: {Math.floor(calories)}g</p>
       {nutritions &&
-        nutritions.map((item: any, idx: any) => (
-          <p key={idx}>
+        nutritions.map((item: any) => (
+          <p key={uuid()}>
             {item.label === 'Fat' && (
               <span> fat: {Math.round(item.total) + '%'} </span>
             )}
@@ -73,14 +74,14 @@ const RecipeCard: React.FC<RecipeCardProp> = ({
       <p>cuisine type: {cuisineType}</p>
       <img src={image} alt="no image" />
       <ul className="ingredient-list">
-        {ingredients.map((ingredient: any, idx: any) => (
-          <li className="ingredient-u-list" key={idx}>
+        {ingredients.map((ingredient: any) => (
+          <li className="ingredient-u-list" key={uuid()}>
             {ingredient.text}
           </li>
         ))}
       </ul>
       <Button
-        onClick={() => onCopyHandler(value)}
+        onClick={() => onCopyHandler(recipe.toString())}
         variant="secondary"
         size="sm"
       >

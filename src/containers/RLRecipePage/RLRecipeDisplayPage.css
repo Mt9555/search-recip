@@ -1,5 +1,8 @@
 .anchor-tag {
-  text-decoration: 'none';
+  text-decoration: none;
+}
+.anchor-tag:hover {
+  text-decoration: underline;
 }
 .invalid-search-query {
   color: rgb(197, 49, 49);

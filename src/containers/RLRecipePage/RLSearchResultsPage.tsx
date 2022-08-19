@@ -8,6 +8,16 @@ import { v4 as uuid } from 'uuid';
 
 interface RLRecipeDisplayPageProps {}
 
+// const PUSHER_DEMAND: {auth: string, nextRage: {}} = {
+//   auth: 'Identifier',
+//   nextRage: {
+//     a: 'web',
+//     b: 'ob',
+//     c: 'infinite',
+//     d: 'spread'
+//   },
+// }
+
 const RLRecipePage: React.FC<RLRecipeDisplayPageProps> = () => {
   const [recipes, setRecipes] = useState<string[] | any>([]);
   const [searchQuery, setSearchQuery] = useState<string>('');

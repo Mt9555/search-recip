@@ -2,11 +2,11 @@ import React from 'react';
 import './styles/Application.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import RLRecipePage from './containers/RLRecipePage/RLRecipeDisplayPage';
+import RLRecipePage from './containers/RLRecipePage/RLSearchResultsPage';
 
-interface BaseComponentConfig {}
+interface BComponentConfig {}
 
-const Application: React.FC<BaseComponentConfig> = () => {
+const Application: React.FC<BComponentConfig> = () => {
   return (
     <div className="Application">
       <Router>

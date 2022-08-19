@@ -4,15 +4,15 @@ import Form from 'react-bootstrap/Form';
 import './RLSearchBox.css';
 
 interface SearchBoxProps {
-  handleSubmit: (e: any) => any;
-  handleChange: (e: any) => any;
+  handleSubmit: (event: React.FormEvent<HTMLFormElement>) => any;
+  handleChange: (event: any) => any;
   query: string;
-  placeholderText: any;
+  placeholderText: string;
 }
 
 const RLSearchBox: React.FC<SearchBoxProps> = ({ ...props }) => {
   return (
-    <div className="search-rl-control">
+    <div className="search-rl-wrapper">
       <h1 className="recipe-lookup-hero-text">Recipe Lookup</h1>
       <Form onSubmit={props.handleSubmit}>
         <Form.Group className="mb-3">

@@ -3,10 +3,10 @@ import getRecipeInfo from '../../lib/getRecipeData';
 import { clearConsole } from '../../lib/clearConsole';
 import RecipeCard from '../RecipeCard/RLRecipeCard';
 import RLSearchBox from '../RLSearchBox';
-import './RLRecipeDisplayPage.css';
+import './RLSearchResultsPage.css';
 import { v4 as uuid } from 'uuid';
 
-interface RLRecipeDisplayPageProps {}
+interface RLSearchResultsPageProps {}
 
 // const PUSHER_DEMAND: {type: string, nextRage: {}} = {
 //   type: 'Identifier',
@@ -18,7 +18,7 @@ interface RLRecipeDisplayPageProps {}
 //   },
 // }
 
-const RLRecipePage: React.FC<RLRecipeDisplayPageProps> = () => {
+const RLRecipePage: React.FC<RLSearchResultsPageProps> = () => {
   const [recipes, setRecipes] = useState<string[] | any>([]);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [dsq, setDSQ] = useState<boolean>(false);

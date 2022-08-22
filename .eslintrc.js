@@ -22,7 +22,6 @@ module.exports = {
       'error',
       { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
     ],
-    // '@typescript-eslint/explicit-function-return-type': 'warn',
     'no-empty': 'warn',
     'no-redeclare': 'off',
   },

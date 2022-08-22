@@ -8,12 +8,12 @@ import { v4 as uuid } from 'uuid';
 
 interface RLRecipeDisplayPageProps {}
 
-// const PUSHER_DEMAND: {auth: string, nextRage: {}} = {
-//   auth: 'Identifier',
+// const PUSHER_DEMAND: {type: string, nextRage: {}} = {
+//   type: 'Identifier',
 //   nextRage: {
-//     a: 'web',
-//     b: 'ob',
-//     c: 'infinite',
+//     'sub:log': 'web',
+//     indicator: 'ob',
+//     k: 'infinite',
 //     d: 'spread'
 //   },
 // }
